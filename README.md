@@ -1,2 +1,2 @@
 # Projeto-PG2
-grupo de Arthur, Adrielly e Marcos.
+Arthur vinicius gomes de souza.  arthurviniciuseng@gmail.com
