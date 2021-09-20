@@ -4,6 +4,7 @@
 ## Integrantes do grupo 
 Arthur vinicius gomes de souza.  arthurviniciuseng@gmail.com
 Adrielly Santana. adriellylovato@gmail.com
+Marcos Bernardo Dos Santos Junior. marcosjunioreloaded@gmail.com
 
 ## Descrição geral do projeto 
 Sistema de adoção e cuidados de uma ONG com animais abandonados, nesse sistema o usuário poderá doar animais em estado de abandono para que o mesmo possa ser cuidado e inserido na fila para adoção, ou ajudar os animais presentes na ONG para a adoção.
