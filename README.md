@@ -21,4 +21,4 @@ Sistema de adoção e cuidados de uma ONG com animais abandonados, nesse sistema
 * **REQ6** - O sistema deverá disponibilizar relatórios que possuam os registros de serviços prestados por voluntários;
 * **REQ7** - O sistema deverá disponiblizar relatórios que possuam os registros de serviços prestados por ajudantes;
 
-
+![alt tag](https://github.com/putuka/Projeto-PG2/blob/main/sos.bichinhos.png?raw=true)
