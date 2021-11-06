@@ -1,4 +1,4 @@
-package br.ufrpe.sosb.beans;
+package br.ufrpe.sos.beans.pessoa;
 
 import java.time.LocalDateTime;
 

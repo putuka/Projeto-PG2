@@ -1,6 +1,4 @@
-package br.ufrpe.sosb.beans;
-
-import br.ufrpe.sosb.data.TipoServico;
+package br.ufrpe.sos.beans.pessoa;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
