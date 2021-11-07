@@ -1,4 +1,4 @@
-module br.ufrpe.sosb {
+module br.ufrpe.sos {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -6,10 +6,12 @@ module br.ufrpe.sosb {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    exports br.ufrpe.sos.beans;
-    opens br.ufrpe.sos.beans to javafx.fxml;
+    exports br.ufrpe.sos.beans.animal;
+    opens br.ufrpe.sos.beans.animal to javafx.fxml;
     exports br.ufrpe.sos.data;
     opens br.ufrpe.sos.data to javafx.fxml;
     exports br.ufrpe.sos.beans.pessoa;
     opens br.ufrpe.sos.beans.pessoa to javafx.fxml;
+    exports br.ufrpe.sos.exceptions;
+    opens br.ufrpe.sos.exceptions to javafx.fxml;
 }
