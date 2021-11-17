@@ -1,8 +1,8 @@
 package br.ufrpe.sos.exceptions;
 
-public class UsuarioJaExisteException extends Exception{
+public class UsuarioJaExisteException extends Exception {
 
-    public UsuarioJaExisteException(){
+    public UsuarioJaExisteException() {
         super("Usuário já existe no nosso sistema");
     }
 }

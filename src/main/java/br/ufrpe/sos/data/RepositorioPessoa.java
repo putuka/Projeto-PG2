@@ -6,36 +6,36 @@ import br.ufrpe.sos.exceptions.*;
 import java.util.Collections;
 import java.util.List;
 
-public class RepositorioPessoa  {
+public class RepositorioPessoa {
 
     private IRepositorioPessoa repositorioPessoa;
     private List<Pessoa> pessoas;
 
     public void cadastrar(Pessoa pessoa) throws UsuarioJaExisteException {
-        if (!this.pessoas.contains(pessoa)){
+        if (!this.pessoas.contains(pessoa)) {
             this.pessoas.add(pessoa);
-        }else {
+        } else {
             throw new UsuarioJaExisteException();
         }
     }
 
-    public List<Pessoa> listar(){
+    public List<Pessoa> listar() {
         return Collections.unmodifiableList(this.pessoas);
     }
 
     public void remover(Pessoa pessoa) throws UsuarioNaoExisteException {
-        if (this.pessoas.contains(pessoa)){
+        if (this.pessoas.contains(pessoa)) {
             this.pessoas.remove(pessoa);
-        }else {
+        } else {
             throw new UsuarioNaoExisteException();
         }
     }
 
     public void atualizar(Pessoa pessoa) throws UsuarioNaoExisteException {
-        if (this.pessoas.contains(pessoa)){
+        if (this.pessoas.contains(pessoa)) {
             int index = this.pessoas.indexOf(pessoa);
             this.pessoas.set(index, pessoa);
-        }else {
+        } else {
             throw new UsuarioNaoExisteException();
         }
     }

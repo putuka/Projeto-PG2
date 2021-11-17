@@ -19,29 +19,53 @@ public class Animal {
 
     //GERANDO GETS AND SETTERS
 
-    public String getTipo() {    return tipo;}
+    public String getTipo() {
+        return tipo;
+    }
 
-    public void setTipo(String tipo) {    this.tipo = tipo;}
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
-    public String getDescricao() {     return descricao;}
+    public String getDescricao() {
+        return descricao;
+    }
 
-    public void setDescricao(String descricao) {    this.descricao = descricao;}
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
-    public LocalDateTime getDataDeEntrada() {   return dataDeEntrada;}
+    public LocalDateTime getDataDeEntrada() {
+        return dataDeEntrada;
+    }
 
-    public void setDataDeEntrada(LocalDateTime dataDeEntrada) {    this.dataDeEntrada = dataDeEntrada;}
+    public void setDataDeEntrada(LocalDateTime dataDeEntrada) {
+        this.dataDeEntrada = dataDeEntrada;
+    }
 
-    public Boolean getDisponivel() {     return disponivel;}
+    public Boolean getDisponivel() {
+        return disponivel;
+    }
 
-    public void setDisponivel(Boolean disponivel) {    this.disponivel = disponivel;}
+    public void setDisponivel(Boolean disponivel) {
+        this.disponivel = disponivel;
+    }
 
-    public Boolean getVacinado() {     return vacinado;}
+    public Boolean getVacinado() {
+        return vacinado;
+    }
 
-    public void setVacinado(Boolean vacinado) {    this.vacinado = vacinado;}
+    public void setVacinado(Boolean vacinado) {
+        this.vacinado = vacinado;
+    }
 
-    public Saude getSaude() {   return saude;}
+    public Saude getSaude() {
+        return saude;
+    }
 
-    public void setSaude(Saude saude) {    this.saude = saude;}
+    public void setSaude(Saude saude) {
+        this.saude = saude;
+    }
 
     //CONSTRUCTOR DO ANIMAL
 
@@ -71,13 +95,13 @@ public class Animal {
     //VENDO SE TEM ANIMAL REPETIDO
 
     @Override
-    public boolean equals (Object o){
-        if(this == o) return true;
-        if(!(o instanceof Animal)) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Animal)) return false;
         Animal animal = (Animal) o;
-        if (getTipo() !=null ?! getTipo().equals(animal.getTipo()) : animal.getTipo() != null) return false;
-        if (getVacinado() != null ?! getVacinado().equals(animal.getVacinado()) : animal.getVacinado() != null);
-        return getDescricao() != null ?! getDescricao().equals(animal.getDescricao()) : animal.getDescricao() != null;
+        if (getTipo() != null ? !getTipo().equals(animal.getTipo()) : animal.getTipo() != null) return false;
+        if (getVacinado() != null ? !getVacinado().equals(animal.getVacinado()) : animal.getVacinado() != null) ;
+        return getDescricao() != null ? !getDescricao().equals(animal.getDescricao()) : animal.getDescricao() != null;
     }
 
     @Override

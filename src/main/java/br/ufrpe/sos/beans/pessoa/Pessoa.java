@@ -10,7 +10,7 @@ public abstract class Pessoa {
     private LocalDateTime dataNascimento;
     private Endereco endereco;
 
-    public Pessoa(){
+    public Pessoa() {
 
     }
 
@@ -22,7 +22,7 @@ public abstract class Pessoa {
         this.endereco = endereco;
     }
 
-    public boolean verificarMaioridade(LocalDateTime data){
+    public boolean verificarMaioridade(LocalDateTime data) {
         return ChronoUnit.YEARS.between(data, LocalDateTime.now()) >= 18;
     }
 

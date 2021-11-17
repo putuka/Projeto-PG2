@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface IRepositorioPessoa {
 
-     void cadastrar(Pessoa pessoa) throws UsuarioJaExisteException;
+    void cadastrar(Pessoa pessoa) throws UsuarioJaExisteException;
 
-     List<Pessoa> listar();
+    List<Pessoa> listar();
 
-     void remover(Pessoa pessoa) throws UsuarioNaoExisteException;
+    void remover(Pessoa pessoa) throws UsuarioNaoExisteException;
 
-     void atualizar(Pessoa pessoa) throws UsuarioNaoExisteException;
+    void atualizar(Pessoa pessoa) throws UsuarioNaoExisteException;
 }

@@ -9,6 +9,7 @@ public class Basico extends Pessoa {
         super();
         this.anonimo = anonimo;
     }
+
     public Basico(boolean anonimo, String nome, String telefone, String cpf, LocalDateTime data, Endereco endereco) {
         super(nome, telefone, cpf, data, endereco);
         this.anonimo = anonimo;
@@ -16,10 +17,9 @@ public class Basico extends Pessoa {
 
     @Override
     public String toString() {
-        if (isAnonimo()){
+        if (isAnonimo()) {
             return "anonimo=" + anonimo + '}';
-        }
-       else return "Basico{" + super.toString() +
+        } else return "Basico{" + super.toString() +
                 ",anonimo=" + anonimo +
                 '}';
     }
@@ -42,8 +42,8 @@ public class Basico extends Pessoa {
         return result;
     }
 
-    public boolean isAptoParaAdocao(){
-        if (!this.isAnonimo()){
+    public boolean isAptoParaAdocao() {
+        if (!this.isAnonimo()) {
             return true;
         }
         return false;
