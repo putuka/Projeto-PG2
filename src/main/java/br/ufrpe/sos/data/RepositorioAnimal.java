@@ -8,7 +8,7 @@ import br.ufrpe.sos.exceptions.UsuarioJaExisteException;
 import java.util.Collections;
 import java.util.List;
 
-public class RepositorioAnimal {
+public class RepositorioAnimal implements IRepositorioAnimal {
 
     private IRepositorioAnimal repositorioAnimal;
     private List<Animal> animals;

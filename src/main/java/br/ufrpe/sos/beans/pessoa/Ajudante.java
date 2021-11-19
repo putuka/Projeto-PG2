@@ -1,47 +1,13 @@
 package br.ufrpe.sos.beans.pessoa;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Ajudante extends Pessoa {
+public class Ajudante {
+    private Pessoa pessoa;
     private TipoServico tipoServico;
     private double valor;
 
-    public Ajudante(String nome, String telefone, String cpf, LocalDateTime dataNascimento, Endereco endereco, TipoServico tipoServico, double valor) {
-        super(nome, telefone, cpf, dataNascimento, endereco);
-        this.tipoServico = tipoServico;
-        this.valor = valor;
-    }
 
-    @Override
-    public String toString() {
-        return "Ajudante{" + super.toString() +
-                ",tipoServico=" + tipoServico +
-                ", valor=" + valor +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Ajudante)) return false;
-        if (!super.equals(o)) return false;
-
-        Ajudante ajudante = (Ajudante) o;
-
-        if (Double.compare(ajudante.valor, valor) != 0) return false;
-        return Objects.equals(tipoServico, ajudante.tipoServico);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = super.hashCode();
-        long temp;
-        result = 31 * result + (tipoServico != null ? tipoServico.hashCode() : 0);
-        temp = Double.doubleToLongBits(valor);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        return result;
-    }
 
     public TipoServico getTipoServico() {
         return tipoServico;
@@ -57,5 +23,30 @@ public class Ajudante extends Pessoa {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ajudante ajudante = (Ajudante) o;
+        return Double.compare(ajudante.valor, valor) == 0 && Objects.equals(pessoa, ajudante.pessoa) && tipoServico == ajudante.tipoServico;
+    }
+
+    @Override
+    public String toString() {
+        return "Ajudante{" +
+                "pessoa=" + pessoa +
+                ", tipoServico=" + tipoServico +
+                ", valor=" + valor +
+                '}';
     }
 }

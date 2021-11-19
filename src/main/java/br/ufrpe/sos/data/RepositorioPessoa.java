@@ -6,7 +6,7 @@ import br.ufrpe.sos.exceptions.*;
 import java.util.Collections;
 import java.util.List;
 
-public class RepositorioPessoa {
+public class RepositorioPessoa implements IRepositorioPessoa {
 
     private IRepositorioPessoa repositorioPessoa;
     private List<Pessoa> pessoas;

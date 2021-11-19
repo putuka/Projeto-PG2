@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.sos.gui.AdocaoController">
-
-    <TitledPane prefHeight="-Infinity" prefWidth="-Infinity" text="Adoção">
-      <effect>
-         <Lighting bumpInput="$null">
-            <light>
-               <Light.Distant>
-                  <color>
-                     <Color red="0.28240740299224854" green="0.6531635522842407" blue="1.0" />
-                  </color>
-               </Light.Distant>
-            </light>
-         </Lighting>
-      </effect>
-      <font>
-         <Font name="SansSerif Regular" size="20.0" />
-      </font></TitledPane>
-   <TableView blendMode="EXCLUSION" centerShape="false" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="700.0" prefWidth="600.0" scaleShape="false" tableMenuButtonVisible="true">
-     <columns>
-       <TableColumn prefWidth="75.0" text="Tipo" />
-         <TableColumn prefWidth="75.0" text="Descrição" />
-         <TableColumn prefWidth="115.0" text="Data De Entrada" />
-         <TableColumn text="Vacinado" />
-         <TableColumn prefWidth="65.0" text="Saúde" />
-     </columns>
-   </TableView>
+   <Pane prefHeight="699.0" prefWidth="600.0">
+         <TableView centerShape="false" editable="true" layoutX="54.0" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="370.0" prefWidth="493.0" scaleShape="false">
+           <columns>
+             <TableColumn prefWidth="75.0" text="Tipo" />
+               <TableColumn prefWidth="75.0" text="Descrição" />
+               <TableColumn prefWidth="115.0" text="Data De Entrada" />
+               <TableColumn text="Vacinado" />
+               <TableColumn prefWidth="65.0" text="Saúde" />
+               <TableColumn prefWidth="130.0"/>
+           </columns>
+         </TableView>
+         <TextField prefHeight="25.0" prefWidth="600.0" text="Adocao" />
+         <Text layoutX="206.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adote um animal!">
+            <font>
+               <Font name="Arial Bold" size="24.0" />
+            </font>
+         </Text>
+   </Pane>
    <TilePane prefHeight="200.0" prefWidth="200.0" />
 </VBox>
