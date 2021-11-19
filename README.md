@@ -28,4 +28,4 @@ como limpeza até a área de saúde como veterinários.
 * **REQ7** - O sistema deverá disponiblizar relatórios que possuam os registros de serviços prestados por ajudantes ou 
 * voluntários;
 
-![alt tag](https://github.com/putuka/Projeto-PG2/blob/main/sos.bichinhos.png?raw=true)
+![alt tag](https://github.com/putuka/Projeto-PG2/blob/main/S.O.S_BichinhosUML.png?raw=true)
