@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <ButtonBar prefHeight="349.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+    <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="603.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="375.0" layoutY="325.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="100.0" text="Doar" />
+            <Label layoutX="74.0" prefHeight="115.0" prefWidth="485.0" text="Doação de Animais" textAlignment="CENTER">
+               <font>
+                  <Font name="Pristina" size="71.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.46445497630331756">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <MenuButton layoutX="199.0" layoutY="150.0" mnemonicParsing="false" text="Cachorro">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cachorro" />
+                <MenuItem mnemonicParsing="false" text="Gato" />
+              </items>
+            </MenuButton>
+            <Label layoutX="60.0" layoutY="152.0" text="Tipo do animal">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="192.0" text="Precedencia do Animal">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="261.0" layoutY="190.0" mnemonicParsing="false" text="Casa">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Casa" />
+                <MenuItem mnemonicParsing="false" text="Rua" />
+              </items>
+            </MenuButton>
+            <Label layoutX="60.0" layoutY="234.0" text="Vacina">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="130.0" layoutY="232.0" mnemonicParsing="false" text="SIM">
+              <items>
+                <MenuItem mnemonicParsing="false" text="NÃO" />
+                <MenuItem mnemonicParsing="false" text="SIM" />
+              </items>
+            </MenuButton>
+            <Button layoutX="483.0" layoutY="325.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="94.0" text="Cancelar" />
+            <Label layoutX="60.0" layoutY="276.0" text="Doença">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="134.0" layoutY="274.0" mnemonicParsing="false" text="SIM">
+              <items>
+                <MenuItem mnemonicParsing="false" text="SIM" />
+                <MenuItem mnemonicParsing="false" text="Nao" />
+              </items>
+            </MenuButton>
+            <TextField layoutX="261.0" layoutY="274.0" prefHeight="25.0" prefWidth="196.0" />
+            <Label layoutX="206.0" layoutY="276.0" text="Qual?">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
