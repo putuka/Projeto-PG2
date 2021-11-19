@@ -2,7 +2,7 @@ package br.ufrpe.sos.beans.pessoa;
 
 import java.util.Objects;
 
-public class Ajudante {
+public class Ajudante extends Pessoa {
     private Pessoa pessoa;
     private TipoServico tipoServico;
     private double valor;

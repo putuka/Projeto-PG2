@@ -1,7 +1,5 @@
 package br.ufrpe.sos.beans.animal;
 
-import sun.util.resources.LocaleData;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
 
