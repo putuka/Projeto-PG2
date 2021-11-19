@@ -29,3 +29,6 @@ como limpeza até a área de saúde como veterinários.
 * voluntários;
 
 ![alt tag](https://github.com/putuka/Projeto-PG2/blob/main/S.O.S_BichinhosUML.png?raw=true)
+
+![alt tag](https://github.com/putuka/Projeto-PG2/blob/main/ModeloNavegacional.png?raw=true)
+
