@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Projeto-PG2" options="--add-exports java.base/sun.util.resources=br.ufrpe.sosb" />
+      <module name="Projeto-PG2" options="--add-exports java.base/sun.util.resources=br.ufrpe.sos.projetopg" />
     </option>
   </component>
 </project>

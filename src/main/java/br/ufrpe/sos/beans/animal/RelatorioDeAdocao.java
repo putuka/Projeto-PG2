@@ -6,12 +6,12 @@ public class RelatorioDeAdocao {
 
     private ArrayList<RelatorioDeAdocao> relatorioDeAdocaos;
 
-    public RelatorioDeAdocao(ArrayList<RelatorioDeAdocao>relatorioDeAdocaos){
+    public RelatorioDeAdocao(ArrayList<RelatorioDeAdocao> relatorioDeAdocaos) {
         this.relatorioDeAdocaos = relatorioDeAdocaos;
     }
 
-    public String gerarRelatorio(){
+    public String gerarRelatorio() {
         toString();
-        return  toString();
+        return toString();
     }
 }

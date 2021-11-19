@@ -10,11 +10,11 @@ import java.util.List;
 
 public interface IRepositorioAnimal {
 
-     void cadastrar(Animal animal) throws AnimalCadastradoException;
+    void cadastrar(Animal animal) throws AnimalCadastradoException;
 
-     List<Animal> listar();
+    List<Animal> listar();
 
-     void remover(Animal animal) throws AnimalNaoCadastradoException;
+    void remover(Animal animal) throws AnimalNaoCadastradoException;
 
-     void atualizar(Animal animal) throws AnimalNaoCadastradoException;
+    void atualizar(Animal animal) throws AnimalNaoCadastradoException;
 }

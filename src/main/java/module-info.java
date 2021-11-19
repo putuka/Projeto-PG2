@@ -1,17 +1,15 @@
-module br.ufrpe.sos {
+module br.ufrpe.sos.projetopg {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.web;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires org.kordamp.bootstrapfx.core;
+//    requires org.controlsfx.controls;
+//    requires com.dlsc.formsfx;
+//    requires validatorfx;
+//    requires org.kordamp.ikonli.javafx;
+//    requires org.kordamp.bootstrapfx.core;
+//    requires eu.hansolo.tilesfx;
 
-    exports br.ufrpe.sos.beans.animal;
-    opens br.ufrpe.sos.beans.animal to javafx.fxml;
-    exports br.ufrpe.sos.data;
-    opens br.ufrpe.sos.data to javafx.fxml;
-    exports br.ufrpe.sos.beans.pessoa;
-    opens br.ufrpe.sos.beans.pessoa to javafx.fxml;
-    exports br.ufrpe.sos.exceptions;
-    opens br.ufrpe.sos.exceptions to javafx.fxml;
+    opens br.ufrpe.sos.gui to javafx.fxml;
+    exports br.ufrpe.sos.gui;
 }

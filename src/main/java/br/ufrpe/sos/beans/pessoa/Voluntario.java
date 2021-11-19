@@ -1,45 +1,12 @@
 package br.ufrpe.sos.beans.pessoa;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.Objects;
 
-public class Voluntario extends Pessoa {
+public class Voluntario{
+    private Pessoa pessoa;
     private TipoServico tipoServico;
     private LocalDate dataEntrada;
-
-    public Voluntario(String nome, String telefone, String cpf, LocalDateTime dataNascimento, Endereco endereco, TipoServico tipoServico, LocalDate dataEntrada) {
-        super(nome, telefone, cpf, dataNascimento, endereco);
-        this.tipoServico = tipoServico;
-        this.dataEntrada = dataEntrada;
-    }
-
-    @Override
-    public String toString() {
-        return "Voluntario{" + super.toString() +
-                ",tipoServico=" + tipoServico +
-                ", dataEntrada=" + dataEntrada +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Voluntario)) return false;
-        if (!super.equals(o)) return false;
-
-        Voluntario that = (Voluntario) o;
-
-        if (getTipoServico() != that.getTipoServico()) return false;
-        return getDataEntrada() != null ? getDataEntrada().equals(that.getDataEntrada()) : that.getDataEntrada() == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (getTipoServico() != null ? getTipoServico().hashCode() : 0);
-        result = 31 * result + (getDataEntrada() != null ? getDataEntrada().hashCode() : 0);
-        return result;
-    }
 
     public TipoServico getTipoServico() {
         return tipoServico;
@@ -55,5 +22,30 @@ public class Voluntario extends Pessoa {
 
     public void setDataEntrada(LocalDate dataEntrada) {
         this.dataEntrada = dataEntrada;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Voluntario that = (Voluntario) o;
+        return Objects.equals(pessoa, that.pessoa) && tipoServico == that.tipoServico && Objects.equals(dataEntrada, that.dataEntrada);
+    }
+
+    @Override
+    public String toString() {
+        return "Voluntario{" +
+                "pessoa=" + pessoa +
+                ", tipoServico=" + tipoServico +
+                ", dataEntrada=" + dataEntrada +
+                '}';
     }
 }
