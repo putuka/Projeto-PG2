@@ -2,8 +2,7 @@ package br.ufrpe.sos.beans.pessoa;
 
 import java.util.Objects;
 
-public class Ajudante extends Pessoa {
-    private Pessoa pessoa;
+public class Ajudante extends Pessoa{
     private TipoServico tipoServico;
     private double valor;
 
@@ -25,26 +24,24 @@ public class Ajudante extends Pessoa {
         this.valor = valor;
     }
 
-    public Pessoa getPessoa() {
-        return pessoa;
-    }
-
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Ajudante ajudante = (Ajudante) o;
-        return Double.compare(ajudante.valor, valor) == 0 && Objects.equals(pessoa, ajudante.pessoa) && tipoServico == ajudante.tipoServico;
+        return Double.compare(ajudante.valor, valor) == 0 && tipoServico == ajudante.tipoServico;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
     }
 
     @Override
     public String toString() {
         return "Ajudante{" +
-                "pessoa=" + pessoa +
+                "pessoa=" + super.toString() +
                 ", tipoServico=" + tipoServico +
                 ", valor=" + valor +
                 '}';

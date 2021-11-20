@@ -3,8 +3,7 @@ package br.ufrpe.sos.beans.pessoa;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Voluntario{
-    private Pessoa pessoa;
+public class Voluntario extends Pessoa{
     private TipoServico tipoServico;
     private LocalDate dataEntrada;
 
@@ -24,26 +23,24 @@ public class Voluntario{
         this.dataEntrada = dataEntrada;
     }
 
-    public Pessoa getPessoa() {
-        return pessoa;
-    }
-
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Voluntario that = (Voluntario) o;
-        return Objects.equals(pessoa, that.pessoa) && tipoServico == that.tipoServico && Objects.equals(dataEntrada, that.dataEntrada);
+        return tipoServico == that.tipoServico && Objects.equals(dataEntrada, that.dataEntrada);
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
     }
 
     @Override
     public String toString() {
         return "Voluntario{" +
-                "pessoa=" + pessoa +
+                "pessoa=" + super.toString() +
                 ", tipoServico=" + tipoServico +
                 ", dataEntrada=" + dataEntrada +
                 '}';
