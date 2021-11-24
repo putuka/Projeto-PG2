@@ -1,5 +1,6 @@
 package br.ufrpe.sos.beans.pessoa;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
@@ -7,23 +8,33 @@ public class Pessoa {
     private String nome;
     private String telefone;
     private String cpf;
-    private LocalDateTime dataNascimento;
+    private String email;
+    private LocalDate dataNascimento;
     private Endereco endereco;
 
     public Pessoa() {
 
     }
 
-    public Pessoa(String nome, String telefone, String cpf, LocalDateTime dataNascimento, Endereco endereco) {
+    public Pessoa(String nome, String telefone, String cpf,String email, LocalDate dataNascimento, Endereco endereco) {
         this.nome = nome;
         this.telefone = telefone;
         this.cpf = cpf;
+        this.email = email;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
     }
 
     public boolean verificarMaioridade(LocalDateTime data) {
         return ChronoUnit.YEARS.between(data, LocalDateTime.now()) >= 18;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getNome() {
@@ -50,11 +61,11 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public LocalDateTime getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(LocalDateTime dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -73,7 +84,8 @@ public class Pessoa {
                 ", telefone='" + telefone + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", dataNascimento=" + dataNascimento +
-                ", endereco=" + endereco;
+                ", endereco=" + endereco +
+                ", email=" + email;
     }
 
     @Override

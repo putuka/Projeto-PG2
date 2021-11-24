@@ -9,7 +9,6 @@ public class Adocao {
     private Animal animal;
     private Pessoa pessoa;
     private LocalDateTime dataDeAdocao;
-    private RelatorioDeAdocao relatorio;
 
     public Animal getAnimal() {
         return animal;
@@ -35,13 +34,6 @@ public class Adocao {
         this.dataDeAdocao = dataDeAdocao;
     }
 
-    public RelatorioDeAdocao getRelatorio() {
-        return relatorio;
-    }
-
-    public void setRelatorio(RelatorioDeAdocao relatorio) {
-        this.relatorio = relatorio;
-    }
 
     @Override
     public String toString() {
@@ -49,7 +41,6 @@ public class Adocao {
                 "animal=" + animal +
                 ", pessoa=" + pessoa +
                 ", dataDeAdocao=" + dataDeAdocao +
-                ", relatorio=" + relatorio +
                 '}';
     }
 }
