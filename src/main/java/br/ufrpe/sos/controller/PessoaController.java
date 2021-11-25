@@ -1,7 +1,6 @@
 package br.ufrpe.sos.controller;
 
 import br.ufrpe.sos.beans.pessoa.Pessoa;
-import br.ufrpe.sos.data.RepositorioAnimal;
 import br.ufrpe.sos.data.RepositorioPessoa;
 import br.ufrpe.sos.exceptions.UsuarioJaExisteException;
 import br.ufrpe.sos.exceptions.UsuarioNaoExisteException;

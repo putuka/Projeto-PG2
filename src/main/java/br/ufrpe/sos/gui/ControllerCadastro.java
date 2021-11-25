@@ -3,17 +3,12 @@ package br.ufrpe.sos.gui;
 import br.ufrpe.sos.beans.pessoa.Endereco;
 import br.ufrpe.sos.beans.pessoa.Pessoa;
 import br.ufrpe.sos.controller.Facades;
-import br.ufrpe.sos.controller.PessoaController;
-import br.ufrpe.sos.exceptions.UsuarioJaExisteException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import javafx.scene.Node;
-import javafx.fxml.FXML;
 
-public class ControlleCadastro {
+public class ControllerCadastro {
 
     @FXML
     private TextField txtNome;
@@ -69,5 +64,7 @@ public class ControlleCadastro {
         this.txtEstado.setText("");
         this.txtCep.setText("");
     }
+
+    //TODO Validação dos campos
 
 }

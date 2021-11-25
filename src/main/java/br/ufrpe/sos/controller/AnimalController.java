@@ -23,6 +23,7 @@ public class AnimalController {
         return instance;
     }
 
+    //TODO gerar identificador único para o animal a ser cadastrado
     public void cadastrarAnimal(Animal animal) throws AnimalCadastradoException {
         repositorioAnimal.cadastrar(animal);
     }

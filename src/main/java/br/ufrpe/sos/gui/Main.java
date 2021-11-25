@@ -43,6 +43,7 @@ public class Main extends Application {
         //DEFININDO VALOR PARA O STAGE E O TITULO DA CENA
         stage = primaryStage;
         primaryStage.setTitle("SOS Bichinhos");
+        primaryStage.setResizable(false);
         //primaryStage.setResizable(false);
         //TELA INICIAL DO MENU
         Parent fxmlTelaPadrao = FXMLLoader.load(getClass().getResource("telaMenu.fxml"));

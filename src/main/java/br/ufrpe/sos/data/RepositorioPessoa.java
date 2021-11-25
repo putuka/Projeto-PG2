@@ -12,6 +12,7 @@ public class RepositorioPessoa implements IRepositorioPessoa {
     private List<Pessoa> pessoas;
 
     public void cadastrar(Pessoa pessoa) throws UsuarioJaExisteException {
+        //TODO verificar se o usuário é maior de idade
         if (!this.pessoas.contains(pessoa)) {
             this.pessoas.add(pessoa);
         } else {

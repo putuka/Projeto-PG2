@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.sos.gui.ControllerMenu">
+   <children>
+      <BorderPane layoutY="-7.0" prefHeight="639.0" prefWidth="1240.0" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="-7.0">
+         <left>
+            <VBox prefHeight="632.0" prefWidth="243.0" style="-fx-background-color: #696969;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#anonimo" prefHeight="202.0" prefWidth="243.0" style="-fx-background-color: #9C9C9C;" text="Anônimo">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../icones/avatar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#cadastro" prefHeight="233.0" prefWidth="243.0" style="-fx-background-color: #9C9C9C;" text="Cadastro">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../icones/avatar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="210.0" prefWidth="243.0" style="-fx-background-color: #9C9C9C;" text="Login">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../icones/copia-de.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="316.0" layoutY="39.0" prefHeight="382.0" prefWidth="629.0" text="S.O.S Bichinhos">
+                     <font>
+                        <Font name="Pristina" size="64.0" />
+                     </font>
+                  </Label>
+                  <ImageView disable="true" fitHeight="647.0" fitWidth="998.0" layoutY="-4.0" mouseTransparent="true" opacity="0.36" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../icones/dog-g170cd2b4b_1920.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
