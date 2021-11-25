@@ -9,8 +9,21 @@ import java.util.List;
 
 public class AnimalController {
 
-    private RepositorioAnimal repositorioAnimal;
+    private final RepositorioAnimal repositorioAnimal;
+    private static AnimalController instance;
 
+    private AnimalController(){
+        this.repositorioAnimal = new RepositorioAnimal();
+    }
+
+    public static AnimalController getInstance(){
+        if (instance == null) {
+            instance = new AnimalController();
+        }
+        return instance;
+    }
+
+    //TODO gerar identificador único para o animal a ser cadastrado
     public void cadastrarAnimal(Animal animal) throws AnimalCadastradoException {
         repositorioAnimal.cadastrar(animal);
     }
