@@ -66,7 +66,7 @@ public class Animal {
 
     //CONSTRUCTOR DO ANIMAL
 
-    public Animal() {
+    public Animal(String tipo, String descricao, LocalDateTime dataDeEntrada, boolean disponivel, boolean vacinado, Saude saude) {
         this.tipo = tipo;
         this.descricao = descricao;
         this.dataDeEntrada = dataDeEntrada;

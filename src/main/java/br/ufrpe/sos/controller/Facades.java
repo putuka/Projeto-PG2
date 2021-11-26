@@ -1,6 +1,8 @@
 package br.ufrpe.sos.controller;
 
+import br.ufrpe.sos.beans.animal.Animal;
 import br.ufrpe.sos.beans.pessoa.Pessoa;
+import br.ufrpe.sos.exceptions.AnimalCadastradoException;
 import br.ufrpe.sos.exceptions.UsuarioJaExisteException;
 
 public class Facades {
@@ -22,7 +24,10 @@ public class Facades {
         return instance;
     }
 
-    public void inserir(Pessoa pessoa) throws UsuarioJaExisteException {
+    public void inserirP(Pessoa pessoa) throws UsuarioJaExisteException {
          pessoaController.inserir(pessoa);
+    }
+    public void inserirA(Animal animal) throws AnimalCadastradoException {
+        animalController.cadastrarAnimal(animal);
     }
 }
