@@ -48,7 +48,7 @@ public class ControllerCadastro {
             Pessoa p = new Pessoa(this.txtNome.getText(),
                     this.txtTelefone.getText(), this.txtCpf.getText(), this.txtEmail.getText(), this.dataNascimento.getValue(), e);
             try {
-                Facades.getInstance().inserir(p);
+                Facades.getInstance().inserirP(p);
             } catch (Exception exception) {
                 // TODO Tratar exceção com mensagem na tela
             }

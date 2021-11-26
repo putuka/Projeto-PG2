@@ -13,7 +13,7 @@ public class Animal {
     private Boolean disponivel;
     private Boolean vacinado;
     private Saude saude;
-
+    // TODO campo de nome e idade
     //GERANDO GETS AND SETTERS
 
     public String getTipo() {
