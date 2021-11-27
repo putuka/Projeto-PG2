@@ -12,7 +12,7 @@ public class SOSBichinhosApp extends Application {
         primaryStage.setScene(ScreenManager .getInstance().getMainScene());
         primaryStage.setTitle("SOS Bichinhos");
         primaryStage.setResizable(false);
-        //primaryStage.getIcons().add(new Image("sos-ico.png"));
+        primaryStage.getIcons().add(new Image("https://cdn-icons-png.flaticon.com/512/1076/1076928.png"));
 
         ScreenManager.getInstance().setPrimaryStage(primaryStage);
 
