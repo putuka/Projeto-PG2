@@ -32,10 +32,10 @@ public class ControllerCadastro {
 
     @FXML
     protected void login(ActionEvent e ){
-        Main.trocaDeTela("telaLogin");
+        ScreenManager.trocaDeTela("telaLogin");
     }
     @FXML
-    protected void voltar(ActionEvent e) {Main.trocaDeTela("telaMenu");}
+    protected void voltar(ActionEvent e) {ScreenManager.trocaDeTela("telaMenu");}
 
     public void voltarAoMenu(ActionEvent event){
         this.limparCampos();
@@ -49,15 +49,15 @@ public class ControllerCadastro {
                     this.txtTelefone.getText(), this.txtCpf.getText(), this.txtEmail.getText(), this.dataNascimento.getValue(), e);
             try {
                 Facades.getInstance().inserirP(p);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Cadastro Efetuado");
+                alert.setHeaderText("Cadastrado efetuado com Sucesso!");
+                alert.showAndWait();
+                this.login(event);
             } catch (Exception exception) {
                 // TODO Tratar exceção com mensagem na tela
             }
             this.limparCampos();
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Cadastro Efetuado");
-            alert.setHeaderText("Cadastrado efetuado com Sucesso!");
-            alert.showAndWait();
-            this.login(event);
         }
     }
 

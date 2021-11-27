@@ -73,10 +73,10 @@
                         <Font name="Arial Italic" size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtEmail" layoutX="205.0" layoutY="307.0" prefHeight="25.0" prefWidth="278.0"/>
-                  <TextField fx:id="txtTelefone" layoutX="205.0" layoutY="350.0" prefHeight="25.0" prefWidth="278.0"/>
-                  <TextField fx:id="txtRua" layoutX="626.0" layoutY="204.0" prefHeight="25.0" prefWidth="278.0"/>
-                  <Button alignment="CENTER" layoutX="711.0" layoutY="521.0" mnemonicParsing="false" onAction="#cadastrarPessoa" prefHeight="64.0" prefWidth="193.0" style="-fx-background-color: #9C9C9C;" text="Cadastrar">
+                  <TextField fx:id="txtEmail" layoutX="205.0" layoutY="307.0" prefHeight="25.0" prefWidth="278.0" />
+                  <TextField fx:id="txtTelefone" layoutX="205.0" layoutY="350.0" prefHeight="25.0" prefWidth="278.0" />
+                  <TextField fx:id="txtRua" layoutX="626.0" layoutY="204.0" prefHeight="25.0" prefWidth="278.0" />
+                  <Button alignment="CENTER" layoutX="744.0" layoutY="525.0" mnemonicParsing="false" onAction="#cadastrarPessoa" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: #9C9C9C;" text="Cadastrar">
                      <font>
                         <Font name="Bernard MT Condensed" size="23.0" />
                      </font>
@@ -92,33 +92,33 @@
                         <Font name="Arial Italic" size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtCpf" layoutX="205.0" layoutY="257.0" prefHeight="25.0" prefWidth="278.0"/>
+                  <TextField fx:id="txtCpf" layoutX="205.0" layoutY="257.0" prefHeight="25.0" prefWidth="278.0" />
                   <Label layoutX="529.0" layoutY="254.0" text="Cidade:">
                      <font>
                         <Font name="Arial Italic" size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtCidade" layoutX="626.0" layoutY="257.0" prefHeight="25.0" prefWidth="278.0"/>
+                  <TextField fx:id="txtCidade" layoutX="626.0" layoutY="257.0" prefHeight="25.0" prefWidth="278.0" />
                   <Label layoutX="529.0" layoutY="305.0" text="Estado:">
                      <font>
                         <Font name="Arial Italic" size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtEstado" layoutX="626.0" layoutY="308.0" prefHeight="25.0" prefWidth="278.0"/>
+                  <TextField fx:id="txtEstado" layoutX="626.0" layoutY="308.0" prefHeight="25.0" prefWidth="278.0" />
                   <Label layoutX="530.0" layoutY="348.0" text="CEP:">
                      <font>
                         <Font name="Arial Italic" size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtCep" layoutX="626.0" layoutY="351.0" prefHeight="25.0" prefWidth="278.0"/>
+                  <TextField fx:id="txtCep" layoutX="626.0" layoutY="351.0" prefHeight="25.0" prefWidth="278.0" />
                   <Label layoutX="68.0" layoutY="401.0" text="Data de Nascimento:">
                      <font>
                         <Font name="Arial Italic" size="25.0" />
                      </font>
                   </Label>
                   <DatePicker fx:id="dataNascimento" layoutX="309.0" layoutY="404.0" />
-                  <TextField fx:id="txtNome" layoutX="205.0" layoutY="204.0" prefHeight="25.0" prefWidth="278.0"/>
-                  <Button alignment="CENTER" layoutX="68.0" layoutY="521.0" mnemonicParsing="false" onAction="#voltarAoMenu" prefHeight="64.0" prefWidth="118.0" style="-fx-background-color: #9C9C9C;" text="Voltar">
+                  <TextField fx:id="txtNome" layoutX="205.0" layoutY="204.0" prefHeight="25.0" prefWidth="278.0" />
+                  <Button alignment="CENTER" layoutX="567.0" layoutY="525.0" mnemonicParsing="false" onAction="#voltarAoMenu" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: #9C9C9C;" text="Voltar">
                      <font>
                         <Font name="Bernard MT Condensed" size="23.0" />
                      </font>

@@ -27,6 +27,15 @@ public class Facades {
     public void inserirP(Pessoa pessoa) throws UsuarioJaExisteException {
          pessoaController.inserir(pessoa);
     }
+
+    public boolean cpfExiste(String cpf){
+        return pessoaController.cpfExiste(cpf);
+    }
+
+    public boolean emailExiste(String email){
+        return pessoaController.emailExiste(email);
+    }
+    
     public void inserirA(Animal animal) throws AnimalCadastradoException {
         animalController.cadastrarAnimal(animal);
     }

@@ -7,24 +7,24 @@ public class ControllerContribuinte {
 
     @FXML
     protected void doar (ActionEvent e ){
-        Main.trocaDeTela("telaDoar");
+        ScreenManager.trocaDeTela("telaDoar");
     }
 
     @FXML
     protected void adotar(ActionEvent e){
-        Main.trocaDeTela("telaAdocao");
+        ScreenManager.trocaDeTela("telaAdocao");
     }
     @FXML
     protected void apadrinhamento(ActionEvent e){
-        Main.trocaDeTela("telaApadrinhamento");
+        ScreenManager.trocaDeTela("telaApadrinhamento");
     }
     @FXML
     protected void perfil(ActionEvent e){
-        Main.trocaDeTela("telaPerfil");
+        ScreenManager.trocaDeTela("telaPerfil");
     }
     @FXML
     protected void ajuda(ActionEvent e){
-        Main.trocaDeTela("telaAjuda");
+        ScreenManager.trocaDeTela("telaAjuda");
     }
 
 
