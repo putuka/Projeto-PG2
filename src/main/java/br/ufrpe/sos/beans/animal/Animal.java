@@ -14,6 +14,7 @@ public class Animal {
     private Saude saude;
     private String nome;
 
+    // TODO campo de nome e idade
     //GERANDO GETS AND SETTERS
 
     public String getTipo() {
@@ -67,6 +68,7 @@ public class Animal {
     public Animal() {
         this.raca = raca;
         this.nome = nome;
+        this.tipo = tipo;
         this.descricao = descricao;
         this.dataDeEntrada = dataDeEntrada;
         this.vacina = vacina;
