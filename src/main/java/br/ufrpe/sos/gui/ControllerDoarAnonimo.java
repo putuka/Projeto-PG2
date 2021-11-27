@@ -7,12 +7,12 @@ public class ControllerDoarAnonimo {
 
 @FXML
     protected void voltar (ActionEvent a){
-    Main.trocaDeTela("telaMenu");
+    ScreenManager.trocaDeTela("telaMenu");
 }
 
 @FXML
     protected void doar (ActionEvent a){
-    Main.trocaDeTela("telaDoarAnonimoConcluido");
+    ScreenManager.trocaDeTela("telaDoarAnonimoConcluido");
 }
 
 }

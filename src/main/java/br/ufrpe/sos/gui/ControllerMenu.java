@@ -8,15 +8,15 @@ public class ControllerMenu {
     //INICIANDO TELA CADASTRO
     @FXML
     protected void cadastro(ActionEvent e){
-        Main.trocaDeTela("telaCadastro");
+        ScreenManager.trocaDeTela("telaCadastro");
     }
     @FXML
     protected void login(ActionEvent e){
-        Main.trocaDeTela("telaLogin");
+        ScreenManager.trocaDeTela("telaLogin");
     }
     @FXML
     protected void anonimo(ActionEvent e){
-        Main.trocaDeTela("telaDoarAnonimo");
+        ScreenManager.trocaDeTela("telaDoarAnonimo");
     }
 
 

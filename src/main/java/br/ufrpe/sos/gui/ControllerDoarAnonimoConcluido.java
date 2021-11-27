@@ -8,7 +8,7 @@ public class ControllerDoarAnonimoConcluido {
     @FXML
     protected void voltar (ActionEvent a){
 
-        Main.trocaDeTela("telaDoarAnonimo");
+        ScreenManager.trocaDeTela("telaDoarAnonimo");
     }
 
 

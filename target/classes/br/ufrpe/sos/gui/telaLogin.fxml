@@ -43,7 +43,7 @@
                         <Image url="@../../../../icones/cat-g20a5a8a4c_1920.jpg" />
                      </image>
                   </ImageView>
-                  <Button alignment="CENTER" layoutX="466.0" layoutY="336.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="146.0" style="-fx-background-color: #9C9C9C;" text="Login">
+                  <Button alignment="CENTER" layoutX="516.0" layoutY="336.0" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #9C9C9C;" text="Login">
                      <font>
                         <Font name="Bernard MT Condensed" size="23.0" />
                      </font>
@@ -60,7 +60,7 @@
                   </Label>
                   <TextField fx:id="txtCpf" layoutX="421.0" layoutY="214.0" prefHeight="25.0" prefWidth="233.0" />
                   <TextField fx:id="txtEmail" layoutX="421.0" layoutY="267.0" prefHeight="25.0" prefWidth="235.0" />
-                  <Button alignment="CENTER" layoutX="99.0" layoutY="521.0" mnemonicParsing="false" onAction="#voltarAoMenu" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #9C9C9C;" text="Voltar ao Menu">
+                  <Button alignment="CENTER" layoutX="364.0" layoutY="336.0" mnemonicParsing="false" onAction="#voltarAoMenu" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #9C9C9C;" text="Voltar">
                      <font>
                         <Font name="Bernard MT Condensed" size="23.0" />
                      </font>

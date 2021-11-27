@@ -25,23 +25,23 @@ public class ControllerDoar {
 
     @FXML
     private void adotar(ActionEvent e){
-        Main.trocaDeTela("telaAdocao");
+        ScreenManager.trocaDeTela("telaAdocao");
     }
     @FXML
     protected void apadrinhamento(ActionEvent e){
-        Main.trocaDeTela("telaApadrinhamento");
+        ScreenManager.trocaDeTela("telaApadrinhamento");
     }
     @FXML
     protected void contribuinte(ActionEvent e){
-        Main.trocaDeTela("telaContribuinte");
+        ScreenManager.trocaDeTela("telaContribuinte");
     }
     @FXML
     protected void perfil(ActionEvent e){
-        Main.trocaDeTela("telaPerfil");
+        ScreenManager.trocaDeTela("telaPerfil");
     }
     @FXML
     protected void ajuda(ActionEvent e){
-        Main.trocaDeTela("telaAjuda");
+        ScreenManager.trocaDeTela("telaAjuda");
     }
 
     public void DoarAnimal(ActionEvent Event){// TODO falta campo para saúde e opção de escolha para vacina, ao invés de texto//

@@ -32,10 +32,10 @@ public class ControllerCadastro {
 
     @FXML
     protected void login(ActionEvent e ){
-        Main.trocaDeTela("telaLogin");
+        ScreenManager.trocaDeTela("telaLogin");
     }
     @FXML
-    protected void voltar(ActionEvent e) {Main.trocaDeTela("telaMenu");}
+    protected void voltar(ActionEvent e) {ScreenManager.trocaDeTela("telaMenu");}
 
     public void voltarAoMenu(ActionEvent event){
         this.limparCampos();

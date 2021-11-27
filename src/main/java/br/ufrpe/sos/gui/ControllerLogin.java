@@ -15,10 +15,10 @@ public class ControllerLogin {
 
     @FXML
     private void perfil(ActionEvent e){
-        Main.trocaDeTela("telaPerfil");
+        ScreenManager.trocaDeTela("telaPerfil");
     }
     @FXML
-    protected void voltar(ActionEvent e) {Main.trocaDeTela("telaMenu");}
+    protected void voltar(ActionEvent e) {ScreenManager.trocaDeTela("telaMenu");}
 
     public void voltarAoMenu(ActionEvent event){
         this.limparCampos();

@@ -7,48 +7,48 @@ public class ControllerAjuda {
 
     @FXML
     protected void doar (ActionEvent e ){
-        Main.trocaDeTela("telaDoar");
+        ScreenManager.trocaDeTela("telaDoar");
     }
     @FXML
     protected void adotar(ActionEvent e){
-        Main.trocaDeTela("telaAdocao");
+        ScreenManager.trocaDeTela("telaAdocao");
     }
     @FXML
     protected void apadrinhamento(ActionEvent e){
-        Main.trocaDeTela("telaApadrinhamento");
+        ScreenManager.trocaDeTela("telaApadrinhamento");
     }
     @FXML
     protected void contribuinte(ActionEvent e){
-        Main.trocaDeTela("telaContribuinte");
+        ScreenManager.trocaDeTela("telaContribuinte");
     }
     @FXML
     protected void perfil(ActionEvent e){
-        Main.trocaDeTela("telaPerfil");
+        ScreenManager.trocaDeTela("telaPerfil");
     }
     @FXML
     protected void ajuda1(ActionEvent e){
-        Main.trocaDeTela("telaAjuda1");
+        ScreenManager.trocaDeTela("telaAjuda1");
     }
 
     @FXML
     protected void voltar(ActionEvent b){
-        Main.trocaDeTela("telaAjuda");
+        ScreenManager.trocaDeTela("telaAjuda");
     }
     @FXML
     protected void ajuda2(ActionEvent a){
-        Main.trocaDeTela("telaAjuda2");
+        ScreenManager.trocaDeTela("telaAjuda2");
     }
     @FXML
     protected void ajuda3(ActionEvent a){
-        Main.trocaDeTela("telaAjuda3");
+        ScreenManager.trocaDeTela("telaAjuda3");
     }
     @FXML
     protected void ajuda4(ActionEvent a){
-        Main.trocaDeTela("telaAjuda4");
+        ScreenManager.trocaDeTela("telaAjuda4");
     }
     @FXML
     protected void ajuda5(ActionEvent a){
-        Main.trocaDeTela("telaAjuda5");
+        ScreenManager.trocaDeTela("telaAjuda5");
     }
 
 
