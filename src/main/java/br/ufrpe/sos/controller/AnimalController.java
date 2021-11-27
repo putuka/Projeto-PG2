@@ -13,7 +13,7 @@ public class AnimalController {
     private static AnimalController instance;
 
     private AnimalController(){
-        this.repositorioAnimal = new RepositorioAnimal();
+        this.repositorioAnimal = new RepositorioAnimal("animais.dat");
     }
 
     public static AnimalController getInstance(){

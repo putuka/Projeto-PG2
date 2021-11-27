@@ -35,6 +35,7 @@ public class Facades {
     public boolean emailExiste(String email){
         return pessoaController.emailExiste(email);
     }
+    
     public void inserirA(Animal animal) throws AnimalCadastradoException {
         animalController.cadastrarAnimal(animal);
     }
