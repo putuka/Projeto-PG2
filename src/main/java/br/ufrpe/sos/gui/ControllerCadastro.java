@@ -49,15 +49,15 @@ public class ControllerCadastro {
                     this.txtTelefone.getText(), this.txtCpf.getText(), this.txtEmail.getText(), this.dataNascimento.getValue(), e);
             try {
                 Facades.getInstance().inserir(p);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Cadastro Efetuado");
+                alert.setHeaderText("Cadastrado efetuado com Sucesso!");
+                alert.showAndWait();
+                this.login(event);
             } catch (Exception exception) {
                 // TODO Tratar exceção com mensagem na tela
             }
             this.limparCampos();
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Cadastro Efetuado");
-            alert.setHeaderText("Cadastrado efetuado com Sucesso!");
-            alert.showAndWait();
-            this.login(event);
         }
     }
 

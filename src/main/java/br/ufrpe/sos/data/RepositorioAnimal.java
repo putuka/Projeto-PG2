@@ -10,8 +10,8 @@ import java.util.List;
 
 public class RepositorioAnimal implements IRepositorioAnimal {
 
-    private IRepositorioAnimal repositorioAnimal;
     private List<Animal> animals;
+    private String filename;
 
     public void cadastrar(Animal animal) throws AnimalCadastradoException {
         if (!this.animals.contains(animal)) {

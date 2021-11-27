@@ -12,7 +12,7 @@ public class PessoaController {
     private static PessoaController instance;
 
     private PessoaController(){
-        this.repoPessoa = new RepositorioPessoa();
+        this.repoPessoa = new RepositorioPessoa("pessoas.dat");
     }
 
     public static PessoaController getInstance(){
@@ -33,5 +33,13 @@ public class PessoaController {
     }
     public void listar(){
         repoPessoa.listar();
+    }
+
+    public boolean cpfExiste(String cpf){
+        return repoPessoa.buscarPorCpf(cpf);
+    }
+
+    public boolean emailExiste(String email){
+        return repoPessoa.buscarPorEmail(email);
     }
 }

@@ -11,6 +11,10 @@ public interface IRepositorioPessoa {
 
     List<Pessoa> listar();
 
+    boolean buscarPorCpf(String cpf);
+
+    boolean buscarPorEmail(String email);
+
     void remover(Pessoa pessoa) throws UsuarioNaoExisteException;
 
     void atualizar(Pessoa pessoa) throws UsuarioNaoExisteException;
