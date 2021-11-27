@@ -45,7 +45,7 @@ public class ControllerDoar {
     }
 
     public void DoarAnimal(ActionEvent Event){// TODO falta campo para saúde e opção de escolha para vacina, ao invés de texto//
-        Animal a = new Animal(this.txtRaca.getText(), this.txtDescricao.getText(), LocalDateTime.now(), true, true, Saude.SAUDAVEL);
+        Animal a = new Animal(this.txtRaca.getText(), this.txtNome.getText(),this.txtDescricao.getText() , LocalDateTime.now(), true, Saude.SAUDAVEL);
         try {
             Facades.getInstance().inserirA(a);
         }catch (Exception exception){

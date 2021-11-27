@@ -1,4 +1,5 @@
 package br.ufrpe.sos.beans.animal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -14,6 +15,17 @@ public class Animal {
     private Saude saude;
     private String nome;
 
+
+    //CONSTRUCTOR DO ANIMAL
+
+    public Animal(String raca, String nome, String descricao, LocalDateTime dataDeEntrada, boolean vacina, Saude saude) {
+        this.raca = raca;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataDeEntrada = dataDeEntrada;
+        this.vacina = vacina;
+        this.saude = saude;
+    }
     // TODO campo de nome e idade
     //GERANDO GETS AND SETTERS
 
@@ -60,18 +72,6 @@ public class Animal {
     }
 
     public void setSaude(Saude saude) {
-        this.saude = saude;
-    }
-
-    //CONSTRUCTOR DO ANIMAL
-
-    public Animal() {
-        this.raca = raca;
-        this.nome = nome;
-        this.tipo = tipo;
-        this.descricao = descricao;
-        this.dataDeEntrada = dataDeEntrada;
-        this.vacina = vacina;
         this.saude = saude;
     }
 

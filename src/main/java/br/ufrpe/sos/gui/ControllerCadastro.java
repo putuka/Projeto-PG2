@@ -48,7 +48,7 @@ public class ControllerCadastro {
             Pessoa p = new Pessoa(this.txtNome.getText(),
                     this.txtTelefone.getText(), this.txtCpf.getText(), this.txtEmail.getText(), this.dataNascimento.getValue(), e);
             try {
-                Facades.getInstance().inserir(p);
+                Facades.getInstance().inserirP(p);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Cadastro Efetuado");
                 alert.setHeaderText("Cadastrado efetuado com Sucesso!");
