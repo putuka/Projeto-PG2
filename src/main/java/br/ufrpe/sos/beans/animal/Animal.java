@@ -97,6 +97,7 @@ public class Animal {
         Animal animal = (Animal) o;
         if (getTipo() != null ? !getTipo().equals(animal.getTipo()) : animal.getTipo() != null) return false;
         if (getVacina() != null ? !getVacina().equals(animal.getVacina()) : animal.getVacina() != null) ;
+        //TODO vazio???
         return getDescricao() != null ? !getDescricao().equals(animal.getDescricao()) : animal.getDescricao() != null;
     }
 
