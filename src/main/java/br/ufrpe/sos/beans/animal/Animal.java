@@ -29,6 +29,7 @@ public class Animal {
     // TODO campo de nome e idade
     //GERANDO GETS AND SETTERS
 
+
     public String getTipo() {
         return raca;
     }
@@ -96,8 +97,7 @@ public class Animal {
         if (!(o instanceof Animal)) return false;
         Animal animal = (Animal) o;
         if (getTipo() != null ? !getTipo().equals(animal.getTipo()) : animal.getTipo() != null) return false;
-        if (getVacina() != null ? !getVacina().equals(animal.getVacina()) : animal.getVacina() != null) ;
-        //TODO vazio???
+        if (getVacina() != null ? !getVacina().equals(animal.getVacina()) : animal.getVacina() != null) return false;
         return getDescricao() != null ? !getDescricao().equals(animal.getDescricao()) : animal.getDescricao() != null;
     }
 

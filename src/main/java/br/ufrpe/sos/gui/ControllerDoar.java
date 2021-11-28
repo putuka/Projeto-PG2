@@ -21,13 +21,13 @@ public class ControllerDoar {
     @FXML
     private MenuItem item2 = new MenuItem("DOENTE");
     @FXML
-    private MenuButton saude = new MenuButton("", null, item1, item2);
-    @FXML
-    private TextField txtIdade;
+    private MenuButton botaoSaude = new MenuButton("", null, item1, item2);
     @FXML
     private TextField txtDescricao;
     @FXML
     private CheckBox checkVacina;
+    @FXML
+    private Button doarAnimal = new Button();
 
     @FXML
     private void adotar(ActionEvent e){
@@ -78,17 +78,16 @@ public class ControllerDoar {
         this.txtNome.setText("");
         this.txtDescricao.setText("");
         this.txtRaca.setText("");
-        this.txtIdade.setText("");
+
     }
+
     private boolean validarInputs(){
         String errorMessage = "";
 
         if (txtNome.getText() == null || txtNome.getText().length() == 0){
             errorMessage += "Preencha o nome!\n";
         }
-        if(txtIdade.getText() == null || txtIdade.getText().length() == 0){
-            errorMessage += "Preencha a idade\n";
-        }
+
         if(txtRaca.getText() == null || txtRaca.getText().length() == 0){
             errorMessage += "Preencha a raça\n";
         }
