@@ -45,23 +45,21 @@ public class ControllerCadastro {
     }
 
     public void cadastrarPessoa(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         if (validarInputs()) {
             Endereco e = new Endereco(this.txtRua.getText(), this.txtCidade.getText(), this.txtEstado.getText(), this.txtCep.getText());
             Pessoa p = new Pessoa(this.txtNome.getText(),
                     this.txtTelefone.getText(), this.txtCpf.getText(), this.txtEmail.getText(), this.dataNascimento.getValue(), e);
 
             try {
-                if (p.verificarMaioridade(this.dataNascimento.getValue())) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     Facades.getInstance().inserirP(p);
                     alert.setTitle("Cadastro Efetuado");
                     alert.setHeaderText("Cadastrado efetuado com Sucesso!");
                     alert.showAndWait();
                     this.login(event);
-                }else {
-                    throw new IdadeInsuficienteException();
-                }
-            } catch (UsuarioJaExisteException | IdadeInsuficienteException userExc) {
+
+            } catch (UsuarioJaExisteException userExc) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Erro no Cadastro");
                 alert.setContentText(userExc.toString());
             }
