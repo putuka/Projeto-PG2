@@ -25,7 +25,6 @@ public class ControllerDoar implements Initializable {
     private TextField txtRaca;
     @FXML
     private TextField txtDescricao;
-
     @FXML
     private ComboBox<Saude> saude;
     @FXML
