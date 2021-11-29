@@ -33,7 +33,7 @@ public class ControllerDoarAnonimo implements Initializable {
         List<Saude> saudes = new ArrayList<>();
         ObservableList<Saude> obssaude;
 
-        Saude saudavel = new Saude("Saudável");
+        Saude saudavel = new Saude("Saudavel");
         Saude cuidadosLeves = new Saude("Cuidados Leves");
         Saude estadoGrave = new Saude("Estado grave");
 
@@ -53,11 +53,12 @@ public class ControllerDoarAnonimo implements Initializable {
     public void DoarAnimalAnonimo(ActionEvent Event) {
         Animal a = null;
         if (validarInputs()) {
-            a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(), false);
+            a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(), "semVacina", "");
 
         }
         try {
             Facades.getInstance().inserirA(a);
+            saude.getButtonCell().getText();
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Doação Efetuada");
             alert.setHeaderText("Doação efetuada com sucesso!");

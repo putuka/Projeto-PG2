@@ -11,19 +11,20 @@ public class Animal {
     private String raca;
     private String descricao;
     private LocalDateTime dataDeEntrada;
-    private Boolean vacina;
-
+    private String vacina;
+    private String estadoSaude;
     private String nome;
 
 
     //CONSTRUCTOR DO ANIMAL
 
-    public Animal(String raca, String nome, String descricao, LocalDateTime dataDeEntrada, boolean vacina) {
+    public Animal(String raca, String nome, String descricao, LocalDateTime dataDeEntrada, String vacina, String estadoSaude) {
         this.raca = raca;
         this.nome = nome;
         this.descricao = descricao;
         this.dataDeEntrada = dataDeEntrada;
         this.vacina = vacina;
+        this.estadoSaude = estadoSaude;
 
     }
     // TODO campo de nome e idade
@@ -44,6 +45,14 @@ public class Animal {
         this.raca = tipo;
     }
 
+    public String getEstadoSaude() {
+        return estadoSaude;
+    }
+
+    public void setEstadoSaude(String estadoSaude) {
+        this.estadoSaude = estadoSaude;
+    }
+
     public String getDescricao() {
         return descricao;
     }
@@ -60,11 +69,11 @@ public class Animal {
         this.dataDeEntrada = dataDeEntrada;
     }
 
-    public Boolean getVacina() {
+    public String getVacina() {
         return vacina;
     }
 
-    public void setVacina(Boolean vacina) {
+    public void setVacina(String vacina) {
         this.vacina = vacina;
     }
 
@@ -73,10 +82,11 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "tipo='" + raca + '\'' +
+                "raca='" + raca + '\'' +
                 ", descricao='" + descricao + '\'' +
-                ", dataDeEntrada=" + dataDeEntrada +
+                ", data de entrada=" + dataDeEntrada +
                 ", vacinado=" + vacina +
+                ", estado de saude=" + estadoSaude +
                 '}';
     }
 

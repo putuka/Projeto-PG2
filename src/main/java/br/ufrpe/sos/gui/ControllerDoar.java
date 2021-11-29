@@ -32,7 +32,7 @@ public class ControllerDoar implements Initializable {
         List<Saude> saudes = new ArrayList<>();
         ObservableList<Saude> obssaude;
 
-        Saude saudavel = new Saude("Saudável");
+        Saude saudavel = new Saude("Saudavel");
         Saude cuidadosLeves = new Saude("Cuidados Leves");
         Saude estadoGrave = new Saude("Estado grave");
 
@@ -89,7 +89,7 @@ public class ControllerDoar implements Initializable {
     public void DoarAnimal(ActionEvent Event) {
         Animal a = null;
         if (validarInputs()) {
-            a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(),false);
+            a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(),"", "");
 
             }
             try {

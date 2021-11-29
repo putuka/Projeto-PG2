@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +38,8 @@ public class ControllerContribuinte implements Initializable {
         ScreenManager.trocaDeTela("telaAjuda");
     }
     @FXML
+    private TextField quantidade;
+    @FXML
     private ComboBox<Tributo> tributo;
     @FXML
     private void listTributo(){
@@ -53,7 +57,7 @@ public class ControllerContribuinte implements Initializable {
         obstributo = FXCollections.observableArrayList(tributos);
         tributo.setItems(obstributo);
     }
-
+    //TODO metodo
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
