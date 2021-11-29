@@ -25,7 +25,6 @@ public class ControllerDoar implements Initializable {
     private TextField txtRaca;
     @FXML
     private TextField txtDescricao;
-
     @FXML
     private ComboBox<Saude> saude;
     @FXML
@@ -87,12 +86,14 @@ public class ControllerDoar implements Initializable {
         ScreenManager.trocaDeTela("telaAjuda");
     }
 
-    public void DoarAnimal(ActionEvent Event) {// TODO falta campo para saúde e opção de escolha para vacina, ao invés de texto//
+    public void DoarAnimal(ActionEvent Event) {
+        Animal a = null;
         if (validarInputs()) {
-            Animal a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(), false);
+            a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(),false);
+
             }
             try {
-
+                Facades.getInstance().inserirA(a);//
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Doação Efetuada");
                 alert.setHeaderText("Doação efetuada com sucesso!");
@@ -123,7 +124,6 @@ public class ControllerDoar implements Initializable {
         if(txtDescricao.getText() == null || txtDescricao.getText().length() == 0){
             errorMessage += "Preencha a descrição\n";
         }
-        //Vacina deve ser boolean
         if (errorMessage.length() == 0){
             return true;
         }else {
