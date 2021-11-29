@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="1171.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.sos.gui.ControllerDoarAnonimo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="1171.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.sos.gui.ControllerDoarAnonimo">
    <children>
       <Pane prefHeight="634.0" prefWidth="1171.0">
          <children>
@@ -25,17 +19,17 @@
                   <Font name="Pristina" size="83.0" />
                </font>
             </Label>
-            <Label layoutX="293.0" layoutY="172.0" text="Tipo:">
+            <Label layoutX="293.0" layoutY="172.0" text="Raça:">
                <font>
                   <Font name="Arial Italic" size="28.0" />
                </font>
             </Label>
-            <Label layoutX="293.0" layoutY="212.0" text="nome(opcional): ">
+            <Label layoutX="293.0" layoutY="212.0" text="Nome: ">
                <font>
                   <Font name="Arial Italic" size="28.0" />
                </font>
             </Label>
-            <Label layoutX="293.0" layoutY="251.0" text="Procedência:">
+            <Label layoutX="293.0" layoutY="251.0" text="Descrição:">
                <font>
                   <Font name="Arial Italic" size="28.0" />
                </font>
@@ -45,17 +39,10 @@
                   <Font name="Arial Italic" size="28.0" />
                </font>
             </Label>
-            <Label layoutX="291.0" layoutY="335.0" text="Data:">
-               <font>
-                  <Font name="Arial Italic" size="28.0" />
-               </font>
-            </Label>
-            <TextField layoutX="528.0" layoutY="175.0" prefHeight="25.0" prefWidth="297.0" />
-            <TextField layoutX="532.0" layoutY="215.0" prefHeight="25.0" prefWidth="297.0" />
-            <TextField layoutX="530.0" layoutY="254.0" prefHeight="25.0" prefWidth="297.0" />
-            <TextField layoutX="528.0" layoutY="296.0" prefHeight="25.0" prefWidth="297.0" />
-            <DatePicker layoutX="526.0" layoutY="338.0" prefHeight="25.0" prefWidth="303.0" />
-            <Button layoutX="1004.0" layoutY="478.0" mnemonicParsing="false" onAction="#doar" prefHeight="79.0" prefWidth="101.0" style="-fx-background-color: #9C9C9C;" text="Doar">
+            <TextField fx:id="txtRaca" layoutX="528.0" layoutY="175.0" prefHeight="25.0" prefWidth="297.0" />
+            <TextField fx:id="txtNome" layoutX="532.0" layoutY="215.0" prefHeight="25.0" prefWidth="297.0" />
+            <TextField fx:id="txtDescricao" layoutX="530.0" layoutY="254.0" prefHeight="25.0" prefWidth="297.0" />
+            <Button layoutX="1004.0" layoutY="478.0" mnemonicParsing="false" onAction="#DoarAnimalAnonimo" prefHeight="79.0" prefWidth="101.0" style="-fx-background-color: #9C9C9C;" text="Doar">
                <font>
                   <Font name="Arial Italic" size="27.0" />
                </font>
@@ -71,7 +58,7 @@
                <center>
                   <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Label layoutY="62.0" prefHeight="57.0" prefWidth="242.0" text="Procedência: Você informa">
+                        <Label layoutY="62.0" prefHeight="57.0" prefWidth="242.0" text="Descrição: Você informa">
                            <font>
                               <Font name="Bernard MT Condensed" size="22.0" />
                            </font>
@@ -105,6 +92,7 @@
                   <Font name="Arial Italic" size="27.0" />
                </font>
             </Button>
+            <ComboBox fx:id="saude" layoutX="528.0" layoutY="300.0" prefWidth="150.0" />
          </children>
       </Pane>
    </children>

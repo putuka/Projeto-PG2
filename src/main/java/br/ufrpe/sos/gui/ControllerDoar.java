@@ -2,26 +2,68 @@ package br.ufrpe.sos.gui;
 
 import br.ufrpe.sos.beans.animal.Animal;
 import br.ufrpe.sos.beans.animal.Saude;
+import br.ufrpe.sos.beans.animal.Vacina;
 import br.ufrpe.sos.controller.Facades;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
+import java.net.URL;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class ControllerDoar {
+public class ControllerDoar implements Initializable {
 
     @FXML
     private TextField txtNome;
     @FXML
     private TextField txtRaca;
     @FXML
-    private TextField txtVacina;
-    @FXML
-    private TextField txtIdade;
-    @FXML
     private TextField txtDescricao;
+    @FXML
+    private ComboBox<Saude> saude;
+    @FXML
+    private void listaSaude(){
+        List<Saude> saudes = new ArrayList<>();
+        ObservableList<Saude> obssaude;
+
+        Saude saudavel = new Saude("Saudavel");
+        Saude cuidadosLeves = new Saude("Cuidados Leves");
+        Saude estadoGrave = new Saude("Estado grave");
+
+        saudes.add(saudavel);
+        saudes.add(cuidadosLeves);
+        saudes.add(estadoGrave);
+
+        obssaude = FXCollections.observableArrayList(saudes);
+        saude.setItems(obssaude);
+    }
+
+    @FXML
+    private ComboBox<Vacina> vacina;
+    @FXML
+    private void listaVacina(){
+
+        List<Vacina> vacinas = new ArrayList<>();
+        ObservableList<Vacina> obsvacina;
+
+        Vacina vacinaRaiva = new Vacina("Raiva");
+        Vacina vacinaCarrapato = new Vacina("Carrapato");
+        Vacina semVacina = new Vacina("Sem vacina");
+
+        vacinas.add(vacinaRaiva);
+        vacinas.add(vacinaCarrapato);
+        vacinas.add(semVacina);
+
+        obsvacina = FXCollections.observableArrayList(vacinas);
+
+        vacina.setItems(obsvacina);
+    }
 
     @FXML
     private void adotar(ActionEvent e){
@@ -44,38 +86,45 @@ public class ControllerDoar {
         ScreenManager.trocaDeTela("telaAjuda");
     }
 
-    public void DoarAnimal(ActionEvent Event){// TODO falta campo para saúde e opção de escolha para vacina, ao invés de texto//
-        Animal a = new Animal(this.txtRaca.getText(), this.txtNome.getText(),this.txtDescricao.getText() , LocalDateTime.now(), true, Saude.SAUDAVEL);
-        try {
-            Facades.getInstance().inserirA(a);
-        }catch (Exception exception){
-            // TODO Tratar exceção com mensagem na tela
+    public void DoarAnimal(ActionEvent Event) {
+        Animal a = null;
+        if (validarInputs()) {
+            a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(),"", "");
+            a.setEstadoSaude(saude.getSelectionModel().getSelectedItem().toString());
+            a.setVacina(vacina.getSelectionModel().getSelectedItem().toString());
+            }
+            try {
+                Facades.getInstance().inserirA(a);//
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Doação efetuada");
+                alert.setHeaderText("Doação efetuada com sucesso!");
+                alert.showAndWait();
+            } catch (Exception exception) {
+                // TODO Tratar exceção com mensagem na tela
+            }
+            this.limparCampos();
         }
-        this.limparCampos();
-    }
+
     public void limparCampos(){
         this.txtNome.setText("");
         this.txtDescricao.setText("");
         this.txtRaca.setText("");
-        this.txtVacina.setText("");
-        this.txtIdade.setText("");
+
     }
+
     private boolean validarInputs(){
         String errorMessage = "";
 
         if (txtNome.getText() == null || txtNome.getText().length() == 0){
             errorMessage += "Preencha o nome!\n";
         }
-        if(txtIdade.getText() == null || txtIdade.getText().length() == 0){
-            errorMessage += "Preencha a idade\n";
-        }
+
         if(txtRaca.getText() == null || txtRaca.getText().length() == 0){
             errorMessage += "Preencha a raça\n";
         }
         if(txtDescricao.getText() == null || txtDescricao.getText().length() == 0){
             errorMessage += "Preencha a descrição\n";
         }
-        //Vacina deve ser boolean
         if (errorMessage.length() == 0){
             return true;
         }else {
@@ -88,4 +137,9 @@ public class ControllerDoar {
         }
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        listaVacina();
+        listaSaude();
+    }
 }

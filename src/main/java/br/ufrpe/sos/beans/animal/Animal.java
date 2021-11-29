@@ -11,23 +11,25 @@ public class Animal {
     private String raca;
     private String descricao;
     private LocalDateTime dataDeEntrada;
-    private Boolean vacina;
-    private Saude saude;
+    private String vacina;
+    private String estadoSaude;
     private String nome;
 
 
     //CONSTRUCTOR DO ANIMAL
 
-    public Animal(String raca, String nome, String descricao, LocalDateTime dataDeEntrada, boolean vacina, Saude saude) {
+    public Animal(String raca, String nome, String descricao, LocalDateTime dataDeEntrada, String vacina, String estadoSaude) {
         this.raca = raca;
         this.nome = nome;
         this.descricao = descricao;
         this.dataDeEntrada = dataDeEntrada;
         this.vacina = vacina;
-        this.saude = saude;
+        this.estadoSaude = estadoSaude;
+
     }
     // TODO campo de nome e idade
     //GERANDO GETS AND SETTERS
+
 
     public String getTipo() {
         return raca;
@@ -41,6 +43,14 @@ public class Animal {
 
     public void setTipo(String tipo) {
         this.raca = tipo;
+    }
+
+    public String getEstadoSaude() {
+        return estadoSaude;
+    }
+
+    public void setEstadoSaude(String estadoSaude) {
+        this.estadoSaude = estadoSaude;
     }
 
     public String getDescricao() {
@@ -59,20 +69,12 @@ public class Animal {
         this.dataDeEntrada = dataDeEntrada;
     }
 
-    public Boolean getVacina() {
+    public String getVacina() {
         return vacina;
     }
 
-    public void setVacina(Boolean vacina) {
+    public void setVacina(String vacina) {
         this.vacina = vacina;
-    }
-
-    public Saude getSaude() {
-        return saude;
-    }
-
-    public void setSaude(Saude saude) {
-        this.saude = saude;
     }
 
     //TOSTRING DO ANIMAL
@@ -80,11 +82,11 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "tipo='" + raca + '\'' +
+                "raca='" + raca + '\'' +
                 ", descricao='" + descricao + '\'' +
-                ", dataDeEntrada=" + dataDeEntrada +
+                ", data de entrada=" + dataDeEntrada +
                 ", vacinado=" + vacina +
-                ", saude=" + saude +
+                ", estado de saude=" + estadoSaude +
                 '}';
     }
 
@@ -96,12 +98,12 @@ public class Animal {
         if (!(o instanceof Animal)) return false;
         Animal animal = (Animal) o;
         if (getTipo() != null ? !getTipo().equals(animal.getTipo()) : animal.getTipo() != null) return false;
-        if (getVacina() != null ? !getVacina().equals(animal.getVacina()) : animal.getVacina() != null) ;
+        if (getVacina() != null ? !getVacina().equals(animal.getVacina()) : animal.getVacina() != null) return false;
         return getDescricao() != null ? !getDescricao().equals(animal.getDescricao()) : animal.getDescricao() != null;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(raca, descricao, dataDeEntrada, vacina, saude);
+        return Objects.hash(raca, descricao, dataDeEntrada, vacina);
     }
 }
