@@ -41,7 +41,7 @@ public class ScreenManager {
 
     private void initialize() throws IOException {
         //TELA INICIAL DO MENU
-        Parent fxmlTelaPadrao = FXMLLoader.load(getClass().getResource("telaMenu.fxml"));
+        Parent fxmlTelaPadrao = FXMLLoader.load(getClass().getResource("telaContribuinte.fxml"));
         telaMenu = new Scene(fxmlTelaPadrao, 1250, 600);
         //TELA DE CADASTRO
         Parent fxmlTelaCadastro = FXMLLoader.load(getClass().getResource("telaCadastro.fxml"));
