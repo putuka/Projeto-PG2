@@ -12,19 +12,19 @@ public class Animal {
     private String descricao;
     private LocalDateTime dataDeEntrada;
     private Boolean vacina;
-    private Saude saude;
+
     private String nome;
 
 
     //CONSTRUCTOR DO ANIMAL
 
-    public Animal(String raca, String nome, String descricao, LocalDateTime dataDeEntrada, boolean vacina, Saude saude) {
+    public Animal(String raca, String nome, String descricao, LocalDateTime dataDeEntrada, boolean vacina) {
         this.raca = raca;
         this.nome = nome;
         this.descricao = descricao;
         this.dataDeEntrada = dataDeEntrada;
         this.vacina = vacina;
-        this.saude = saude;
+
     }
     // TODO campo de nome e idade
     //GERANDO GETS AND SETTERS
@@ -68,14 +68,6 @@ public class Animal {
         this.vacina = vacina;
     }
 
-    public Saude getSaude() {
-        return saude;
-    }
-
-    public void setSaude(Saude saude) {
-        this.saude = saude;
-    }
-
     //TOSTRING DO ANIMAL
 
     @Override
@@ -85,7 +77,6 @@ public class Animal {
                 ", descricao='" + descricao + '\'' +
                 ", dataDeEntrada=" + dataDeEntrada +
                 ", vacinado=" + vacina +
-                ", saude=" + saude +
                 '}';
     }
 
@@ -103,6 +94,6 @@ public class Animal {
 
     @Override
     public int hashCode() {
-        return Objects.hash(raca, descricao, dataDeEntrada, vacina, saude);
+        return Objects.hash(raca, descricao, dataDeEntrada, vacina);
     }
 }

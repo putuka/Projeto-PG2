@@ -2,32 +2,69 @@ package br.ufrpe.sos.gui;
 
 import br.ufrpe.sos.beans.animal.Animal;
 import br.ufrpe.sos.beans.animal.Saude;
+import br.ufrpe.sos.beans.animal.Vacina;
 import br.ufrpe.sos.controller.Facades;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import net.synedra.validatorfx.Check;
 
+import java.net.URL;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class ControllerDoar {
+public class ControllerDoar implements Initializable {
 
     @FXML
     private TextField txtNome;
     @FXML
     private TextField txtRaca;
     @FXML
-    private MenuItem item1 = new MenuItem("SAUDAVEL");
-    @FXML
-    private MenuItem item2 = new MenuItem("DOENTE");
-    @FXML
-    private MenuButton botaoSaude = new MenuButton("", null, item1, item2);
-    @FXML
     private TextField txtDescricao;
+
     @FXML
-    private CheckBox checkVacina;
+    private ComboBox<Saude> saude;
     @FXML
-    private Button doarAnimal = new Button();
+    private void listaSaude(){
+        List<Saude> saudes = new ArrayList<>();
+        ObservableList<Saude> obssaude;
+
+        Saude saudavel = new Saude("Saudável");
+        Saude cuidadosLeves = new Saude("Cuidados Leves");
+        Saude estadoGrave = new Saude("Estado grave");
+
+        saudes.add(saudavel);
+        saudes.add(cuidadosLeves);
+        saudes.add(estadoGrave);
+
+        obssaude = FXCollections.observableArrayList(saudes);
+        saude.setItems(obssaude);
+    }
+
+    @FXML
+    private ComboBox<Vacina> vacina;
+    @FXML
+    private void listaVacina(){
+
+        List<Vacina> vacinas = new ArrayList<>();
+        ObservableList<Vacina> obsvacina;
+
+        Vacina vacinaRaiva = new Vacina("Raiva");
+        Vacina vacinaCarrapato = new Vacina("Carrapato");
+        Vacina semVacina = new Vacina("Sem Vacina");
+
+        vacinas.add(vacinaRaiva);
+        vacinas.add(vacinaCarrapato);
+        vacinas.add(semVacina);
+
+        obsvacina = FXCollections.observableArrayList(vacinas);
+
+        vacina.setItems(obsvacina);
+    }
 
     @FXML
     private void adotar(ActionEvent e){
@@ -52,18 +89,10 @@ public class ControllerDoar {
 
     public void DoarAnimal(ActionEvent Event) {// TODO falta campo para saúde e opção de escolha para vacina, ao invés de texto//
         if (validarInputs()) {
-            Animal a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(), false, Saude.NULL);
-            if(checkVacina.isSelected()){
-                a.setVacina(Boolean.TRUE);
+            Animal a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(), false);
             }
-            item1.setOnAction(e -> {
-                a.setSaude(Saude.SAUDAVEL);
-            });
-            item2.setOnAction(e -> {
-                a.setSaude(Saude.DOENTE);
-            });
             try {
-                Facades.getInstance().inserirA(a);
+
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Doação Efetuada");
                 alert.setHeaderText("Doação efetuada com sucesso!");
@@ -73,7 +102,7 @@ public class ControllerDoar {
             }
             this.limparCampos();
         }
-    }
+
     public void limparCampos(){
         this.txtNome.setText("");
         this.txtDescricao.setText("");
@@ -107,4 +136,9 @@ public class ControllerDoar {
         }
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        listaVacina();
+        listaSaude();
+    }
 }
