@@ -25,8 +25,8 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public boolean verificarMaioridade(LocalDateTime data) {
-        return ChronoUnit.YEARS.between(data, LocalDateTime.now()) >= 18;
+    public boolean verificarMaioridade(LocalDate data) {
+        return ChronoUnit.YEARS.between(data, LocalDate.now()) >= 18;
     }
 
     public String getEmail() {

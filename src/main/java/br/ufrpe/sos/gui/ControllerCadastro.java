@@ -3,6 +3,8 @@ package br.ufrpe.sos.gui;
 import br.ufrpe.sos.beans.pessoa.Endereco;
 import br.ufrpe.sos.beans.pessoa.Pessoa;
 import br.ufrpe.sos.controller.Facades;
+import br.ufrpe.sos.exceptions.IdadeInsuficienteException;
+import br.ufrpe.sos.exceptions.UsuarioJaExisteException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -42,20 +44,26 @@ public class ControllerCadastro {
         this.voltar(event);
     }
 
-    public void cadastrarPessoa(ActionEvent event){
+    public void cadastrarPessoa(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         if (validarInputs()) {
             Endereco e = new Endereco(this.txtRua.getText(), this.txtCidade.getText(), this.txtEstado.getText(), this.txtCep.getText());
             Pessoa p = new Pessoa(this.txtNome.getText(),
                     this.txtTelefone.getText(), this.txtCpf.getText(), this.txtEmail.getText(), this.dataNascimento.getValue(), e);
+
             try {
-                Facades.getInstance().inserirP(p);
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Cadastro Efetuado");
-                alert.setHeaderText("Cadastrado efetuado com Sucesso!");
-                alert.showAndWait();
-                this.login(event);
-            } catch (Exception exception) {
-                // TODO Tratar exceção com mensagem na tela
+                if (p.verificarMaioridade(this.dataNascimento.getValue())) {
+                    Facades.getInstance().inserirP(p);
+                    alert.setTitle("Cadastro Efetuado");
+                    alert.setHeaderText("Cadastrado efetuado com Sucesso!");
+                    alert.showAndWait();
+                    this.login(event);
+                }else {
+                    throw new IdadeInsuficienteException();
+                }
+            } catch (UsuarioJaExisteException | IdadeInsuficienteException userExc) {
+                alert.setTitle("Erro no Cadastro");
+                alert.setContentText(userExc.toString());
             }
             this.limparCampos();
         }

@@ -81,17 +81,6 @@
                         <Font name="Bernard MT Condensed" size="23.0" />
                      </font>
                   </Button>
-                  <MenuButton layoutX="344.0" layoutY="450.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #9C9C9C;" text="Membro">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Voluntario" />
-                      <MenuItem mnemonicParsing="false" text="Ajudante" />
-                    </items>
-                  </MenuButton>
-                  <Label layoutX="66.0" layoutY="455.0" text="Tipo de Cadastro:">
-                     <font>
-                        <Font name="Arial Italic" size="25.0" />
-                     </font>
-                  </Label>
                   <TextField fx:id="txtCpf" layoutX="205.0" layoutY="257.0" prefHeight="25.0" prefWidth="278.0" />
                   <Label layoutX="529.0" layoutY="254.0" text="Cidade:">
                      <font>
