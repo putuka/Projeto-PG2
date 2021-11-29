@@ -54,7 +54,7 @@ public class ControllerDoar implements Initializable {
 
         Vacina vacinaRaiva = new Vacina("Raiva");
         Vacina vacinaCarrapato = new Vacina("Carrapato");
-        Vacina semVacina = new Vacina("Sem Vacina");
+        Vacina semVacina = new Vacina("Sem vacina");
 
         vacinas.add(vacinaRaiva);
         vacinas.add(vacinaCarrapato);
@@ -90,12 +90,13 @@ public class ControllerDoar implements Initializable {
         Animal a = null;
         if (validarInputs()) {
             a = new Animal(this.txtRaca.getText(), this.txtNome.getText(), this.txtDescricao.getText(), LocalDateTime.now(),"", "");
-
+            a.setEstadoSaude(saude.getSelectionModel().getSelectedItem().toString());
+            a.setVacina(vacina.getSelectionModel().getSelectedItem().toString());
             }
             try {
                 Facades.getInstance().inserirA(a);//
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Doação Efetuada");
+                alert.setTitle("Doação efetuada");
                 alert.setHeaderText("Doação efetuada com sucesso!");
                 alert.showAndWait();
             } catch (Exception exception) {
